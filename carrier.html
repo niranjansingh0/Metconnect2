@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Careers - MetConnect Infotech Pvt. Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="HR solutions, compliance, careers, jobs" name="keywords">
+    <meta content="Join MetConnect Infotech - Your gateway to exciting career opportunities in HR and compliance solutions" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .career-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .career-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .career-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+            margin-bottom: 30px;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .job-title {
+            color: #333;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .job-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .job-meta span {
+            margin-right: 20px;
+        }
+        
+        .job-meta i {
+            margin-right: 5px;
+            color: #667eea;
+        }
+        
+        .apply-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .culture-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .culture-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .culture-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: white;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .application-form {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .filter-buttons {
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+   <!-- Topbar Start -->
+    <div
+      class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block"
+    >
+      <div class="container">
+        <div class="row gx-0 align-items-center">
+          <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+            <div class="d-flex flex-wrap">
+              <div class="border-end border-primary pe-3">
+                <a href="https://g.co/kgs/GXUv6cp" class="text-muted small"
+                  ><i class="fas fa-map-marker-alt text-primary me-2"></i>Find
+                  Our Location</a
+                >
+              </div>
+              <div class="ps-3">
+                <a href="mailto:example@gmail.com" class="text-muted small"
+                  ><i class="fas fa-envelope text-primary me-2"></i>
+                  info@metconnectinfotech.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-flex justify-content-end">
+               <div class="d-flex border-end border-primary pe-3">
+              <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/p/MetConnect-Infotech-Pvt-Ltd-100083566590777/"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn p-0 text-primary me-3" href="https://x.com/MetConnect2022"><i class="fab fa-twitter"></i></a>
+              <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/metconnectinfotechpvt._l?igsh=N3B0NzIyMWk0dmt5"><i class="fab fa-instagram"></i></a>
+              <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/company/metconnect-infotech-pvt-ltd/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+              <div class="dropdown ms-3">
+                <a
+                  href="#"
+                  class="dropdown-toggle text-dark"
+                  data-bs-toggle="dropdown"
+                  ><small
+                    ><i class="fas fa-globe-europe text-primary me-2"></i>
+                    English</small
+                  ></a
+                >
+                <div class="dropdown-menu rounded">
+                  <a href="#" class="dropdown-item">English</a>
+                  <a href="#" class="dropdown-item">Bangla</a>
+                  <a href="#" class="dropdown-item">French</a>
+                  <a href="#" class="dropdown-item">Spanish</a>
+                  <a href="#" class="dropdown-item">Arabic</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="#" class="navbar-brand p-0">
+            <h1 class="text-primary mb-0 d-flex align-items-center">
+              <img
+                src="img/logo.png"
+                alt="MetConnect Logo"
+                style="height: 40px; margin-right: 10px"
+              />
+              MetConnect
+            </h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-0 mx-lg-auto">
+              <a href="index.html" class="nav-item nav-link active">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="Industries.html" class="nav-item nav-link">Industries</a>
+              <a href="./carrier.html" class="nav-item nav-link">Career</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <div class="nav-btn px-3">
+                <a
+                  href="#"
+                  class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"
+                  >Login Here</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar  End -->
+
+    <!-- Hero Section Start -->
+    <section class="career-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Build Your Career with MetConnect</h1>
+                    <p class="lead mb-4">Join our dynamic team and be part of India's leading HR and compliance solutions provider. We're looking for passionate individuals who want to make a difference.</p>
+                    <a href="#openings" class="btn btn-light btn-lg rounded-pill px-4 py-3">View Open Positions</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team collaboration" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Stats Section Start -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Section End -->
+
+    <!-- Company Culture Start -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Why Choose MetConnect?</h2>
+                <p class="section-subtitle">Discover what makes us a great place to work</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="mb-3">Collaborative Environment</h4>
+                        <p class="text-muted">Work with talented professionals in a supportive and inclusive team environment where everyone's voice matters.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="mb-3">Growth Opportunities</h4>
+                        <p class="text-muted">Continuous learning and development programs to help you advance your career and reach your full potential.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4 class="mb-3">Work-Life Balance</h4>
+                        <p class="text-muted">Flexible working arrangements and comprehensive benefits to ensure you maintain a healthy work-life balance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="mb-3">Innovation Focus</h4>
+                        <p class="text-muted">Be part of cutting-edge projects and contribute to innovative HR solutions that make a real difference.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="mb-3">Competitive Benefits</h4>
+                        <p class="text-muted">Attractive compensation packages, health insurance, and additional perks to take care of you and your family.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="culture-card">
+                        <div class="culture-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="mb-3">Recognition</h4>
+                        <p class="text-muted">Regular recognition programs to celebrate achievements and reward outstanding performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Company Culture End -->
+
+    <!-- Job Openings Start -->
+    <section class="py-5 bg-light" id="openings">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Current Openings</h2>
+                <p class="section-subtitle">Find your perfect role and join our growing team</p>
+            </div>
+            
+            <div class="filter-buttons text-center mb-5">
+                <button class="filter-btn active" data-filter="all">All Positions</button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="hr">HR & Compliance</button>
+                <button class="filter-btn" data-filter="sales">Sales & Marketing</button>
+                <button class="filter-btn" data-filter="operations">Operations</button>
+            </div>
+
+            <div class="row" id="job-listings">
+                <div class="col-lg-6 job-item" data-category="technical">
+                    <div class="job-card">
+                        <h3 class="job-title">Senior Software Developer</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>3+ years</span>
+                        </div>
+                        <p class="mb-3">Join our development team to build innovative HR solutions using modern technologies. Experience with React, Node.js, and cloud platforms preferred.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-primary me-2">React</span>
+                                <span class="badge bg-primary me-2">Node.js</span>
+                                <span class="badge bg-primary">AWS</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('Senior Software Developer')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 job-item" data-category="hr">
+                    <div class="job-card">
+                        <h3 class="job-title">HR Compliance Specialist</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>2+ years</span>
+                        </div>
+                        <p class="mb-3">Help our clients navigate complex HR compliance requirements. Strong knowledge of labor laws and regulations required.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-success me-2">Labor Law</span>
+                                <span class="badge bg-success me-2">Compliance</span>
+                                <span class="badge bg-success">Consulting</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('HR Compliance Specialist')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 job-item" data-category="sales">
+                    <div class="job-card">
+                        <h3 class="job-title">Business Development Manager</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>4+ years</span>
+                        </div>
+                        <p class="mb-3">Drive business growth by identifying new opportunities and building relationships with potential clients in the HR services sector.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-warning me-2">Sales</span>
+                                <span class="badge bg-warning me-2">B2B</span>
+                                <span class="badge bg-warning">Relationship Building</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('Business Development Manager')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 job-item" data-category="technical">
+                    <div class="job-card">
+                        <h3 class="job-title">UI/UX Designer</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>2+ years</span>
+                        </div>
+                        <p class="mb-3">Create intuitive and engaging user experiences for our HR platform. Proficiency in Figma, Adobe Creative Suite, and user research methods required.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-info me-2">Figma</span>
+                                <span class="badge bg-info me-2">Adobe XD</span>
+                                <span class="badge bg-info">User Research</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('UI/UX Designer')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 job-item" data-category="operations">
+                    <div class="job-card">
+                        <h3 class="job-title">Operations Manager</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>5+ years</span>
+                        </div>
+                        <p class="mb-3">Oversee day-to-day operations and ensure smooth delivery of our HR services. Strong leadership and process optimization skills required.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-dark me-2">Leadership</span>
+                                <span class="badge bg-dark me-2">Process Optimization</span>
+                                <span class="badge bg-dark">Project Management</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('Operations Manager')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 job-item" data-category="hr">
+                    <div class="job-card">
+                        <h3 class="job-title">HR Business Partner</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i>Patna, Bihar</span>
+                            <span><i class="fas fa-clock"></i>Full-time</span>
+                            <span><i class="fas fa-graduation-cap"></i>3+ years</span>
+                        </div>
+                        <p class="mb-3">Partner with business leaders to develop and implement HR strategies that drive organizational success and employee engagement.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-success me-2">HR Strategy</span>
+                                <span class="badge bg-success me-2">Employee Relations</span>
+                                <span class="badge bg-success">Change Management</span>
+                            </div>
+                            <button class="apply-btn" onclick="showApplicationForm('HR Business Partner')">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Job Openings End -->
+
+    <!-- Application Form Modal -->
+    <div class="modal fade" id="applicationModal" tabindex="-1" aria-labelledby="applicationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applicationModalLabel">Apply for Position</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="applicationForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="experience" class="form-label">Years of Experience *</label>
+                                <select class="form-control" id="experience" required>
+                                    <option value="">Select Experience</option>
+                                    <option value="0-1">0-1 years</option>
+                                    <option value="1-3">1-3 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="5+">5+ years</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="resume" class="form-label">Resume *</label>
+                                <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="aadhar" class="form-label">Aadhar Number *</label>
+                                <input type="text" class="form-control" id="aadhar" name="aadhar" pattern="\d{12}" maxlength="12" required placeholder="Enter 12-digit Aadhar Number">
+                            </div>
+                            
+
+                            <div class="col-12">
+                                <label for="coverLetter" class="form-label">Cover Letter</label>
+                                <textarea class="form-control" id="coverLetter" rows="4" placeholder="Tell us why you're interested in this position..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="applicationForm" class="btn btn-primary">Submit Application</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Footer Start -->
+  <div class="container-fluid footer py-0 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-xl-9">
+          <div class="mb-5">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-6 col-xl-5">
+                <div class="footer-item">
+                  <a href="#" class="navbar-brand p-0">
+                    <h1 class="text-primary mb-0 d-flex align-items-center">
+                      <img src="img/logo.png" alt="MetConnect Logo" style="height: 40px; margin-right: 10px" />
+                      MetConnect
+                    </h1>
+                  </a>
+                  <p class="text-white mb-4">
+                    Metconnect Infotech Private Limited, established in 2022
+                    and headquartered in Patna, Bihar, is a dynamic and
+                    privately held company specializing in comprehensive Human
+                    Resource (HR) and compliance solutions.
+                  </p>
+                  <div class="footer-btn d-flex">
+                    <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                  <h4 class="text-white mb-4">Useful Links</h4>
+                  <a href="./about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                  <a href="./Industries.html"><i class="fas fa-angle-right me-2"></i> Industries</a>
+                  <a href="./Services.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                  <a href="./carrier.html"><i class="fas fa-angle-right me-2"></i> career</a>
+
+                  <a href="./contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                </div>
+
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="footer-item">
+                  <h4 class="mb-4 text-white">Policy</h4>
+                  <div class="row">
+                    <a href="TermsCondition.html">Terms & Conditions</a>
+                    <a href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="Accessibility.html">Accessibility</a>
+                  </div>
+                  <p class="text-white mb-2">
+                    <strong>Working Hours:</strong><br />
+                    <span class="d-block">(Mon – Sat) 10:00 AM – 6:00 PM</span>
+                    <span class="d-block">Sunday <span class="text-danger fw-semibold">Closed</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3">
+          <div class="footer-item">
+            <h4 class="text-white mb-4">Newsletter</h4>
+            <p class="text-white mb-3">
+              Stay connected with us for the latest updates, insights, and
+              opportunities that empower growth and streamline HR processes.
+            </p>
+            <div class="position-relative rounded-pill mb-4">
+              <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
+                placeholder="Enter your email" />
+              <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">
+                Send
+              </button>
+            </div>
+            <div class="d-flex flex-shrink-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div
+      style="
+        background-color: #000;
+        padding: 1.5rem 0;
+        color: #fff;
+        font-size: 14px;
+      "
+    >
+      <div style="max-width: 1140px; margin: 0 auto; text-align: center">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+          "
+        >
+          <div style="width: 100%">
+            <span style="color: #fff">
+              <a
+                href="#"
+                style="
+                  border-bottom: 1px solid transparent;
+                  color: #fff;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                "
+                onmouseover="this.style.borderBottom='1px solid #fff'"
+                onmouseout="this.style.borderBottom='1px solid transparent'"
+              >
+               
+                MetConnect Infotech Pvt. Ltd.
+              </a>
+             | © <span id="copyright-year"></span> All rights reserved.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+     <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Set current year in copyright
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // Job filtering functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const jobItems = document.querySelectorAll('.job-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                jobItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Application form functionality
+        let selectedPosition = '';
+
+        function showApplicationForm(position) {
+            selectedPosition = position;
+            document.getElementById('applicationModalLabel').textContent = `Apply for ${position}`;
+            const modal = new bootstrap.Modal(document.getElementById('applicationModal'));
+            modal.show();
+        }
+
+        // Form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData();
+            formData.append('position', selectedPosition);
+            formData.append('firstName', document.getElementById('firstName').value);
+            formData.append('lastName', document.getElementById('lastName').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('experience', document.getElementById('experience').value);
+            formData.append('coverLetter', document.getElementById('coverLetter').value);
+            
+            const resumeFile = document.getElementById('resume').files[0];
+            if (resumeFile) {
+                formData.append('resume', resumeFile);
+            }
+
+            // Simulate form submission
+            alert(`Thank you for applying for the ${selectedPosition} position! We'll review your application and get back to you soon.`);
+            
+            // Reset form and close modal
+            document.getElementById('applicationForm').reset();
+            bootstrap.Modal.getInstance(document.getElementById('applicationModal')).hide();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                element.textContent = Math.floor(start);
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 16);
+        }
+
+        // Trigger counter animation when stats section is in view
+        const statsSection = document.querySelector('.stats-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.textContent);
+                        counter.textContent = '0';
+                        animateCounter(counter, target);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+</body>

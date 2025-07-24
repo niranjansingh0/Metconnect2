@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Metconnect Infotech Pvt. Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    /* General Reset */
+
+
+    /* Card Layout */
+    .card {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .left-side,
+    .right-side {
+        flex: 1;
+    }
+
+    .left-side {
+        text-align: center;
+    }
+
+    .left-side img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .left-side img:hover {
+        transform: scale(1.05);
+    }
+
+    .right-side {
+        padding: 1rem;
+    }
+
+    .info {
+        margin-bottom: 1rem;
+    }
+
+    .info p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    .info strong {
+        color: #ff6600;
+    }
+
+    .employCount {
+        font-weight: bold;
+        font-size: 22px;
+        color: #111;
+    }
+
+    /* Description */
+    .description p {
+        font-size: 15px;
+        text-align: justify;
+        color: #333;
+        line-height: 1.6;
+        padding-top: 0.5rem;
+        border-top: 1px solid #eee;
+        animation: fadeIn 1s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <div class="border-end border-primary pe-3">
+                            <a href="https://g.co/kgs/GXUv6cp" class="text-muted small"><i
+                                    class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Location</a>
+                        </div>
+                        <div class="ps-3">
+                            <a href="mailto:example@gmail.com" class="text-muted small"><i
+                                    class="fas fa-envelope text-primary me-2"></i> info@metconnectinfotech.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex justify-content-end">
+                        <div class="d-flex border-end border-primary pe-3">
+                           <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/p/MetConnect-Infotech-Pvt-Ltd-100083566590777/"><i class="fab fa-facebook-f"></i></a>
+                           <a class="btn p-0 text-primary me-3" href="https://x.com/MetConnect2022"><i class="fab fa-twitter"></i></a>
+                           <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/metconnectinfotechpvt._l?igsh=N3B0NzIyMWk0dmt5"><i class="fab fa-instagram"></i></a>
+                           <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/company/metconnect-infotech-pvt-ltd/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="dropdown ms-3">
+                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
+                                        class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item">English</a>
+                                <a href="#" class="dropdown-item">Bangla</a>
+                                <a href="#" class="dropdown-item">French</a>
+                                <a href="#" class="dropdown-item">Spanish</a>
+                                <a href="#" class="dropdown-item">Arabic</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand p-0">
+                    <h1 class="text-primary mb-0 d-flex align-items-center">
+                        <img src="img/logo.png" alt="MetConnect Logo" style="height: 40px; margin-right: 10px;">
+                        MetConnect
+                    </h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-0 mx-lg-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="Industries.html" class="nav-item nav-link">Industries</a>
+                        <a href="./carrier.html" class="nav-item nav-link">Career</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <div class="nav-btn px-3">
+
+                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0">Login Here</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- Industries Start -->
+
+    <!-- MAIN CARD -->
+
+
+    <section class="card"
+        style="display: flex; flex-wrap: wrap; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px auto; max-width: 1000px; overflow: hidden;">
+
+        <!-- Title -->
+        <h2 class="main-title"
+            style="width: 100%; text-align: center; background: #640124; color: white; padding: 15px 0; font-size: 24px; margin: 0;">
+            Board Of Revenue
+        </h2>
+
+        <!-- Left Side Image -->
+        <div class="left-side"
+            style="flex: 1 1 300px; min-width: 280px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+            <img src="./img/BOR.png" alt="Board of Revenue Building" class="building"
+                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-side"
+            style="flex: 2 1 400px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+
+            <!-- Info -->
+            <div class="info" style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                <p><strong>Nature of Work:</strong> DEO, Programmer, Revenue Officer, etc.</p>
+                <p><strong>No of Employees:</strong>
+                    <span class="employCount" data-target="163" style="font-weight: bold; color: #005a9c;">163</span>
+                </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description" style="font-size: 15px; color: #333;">
+                <p>
+                    Our company has provided a total of 106 skilled personnel to the Board of Revenue (BOR), Bihar,
+                    across various key roles including Retired Revenue Officers, Stenographers, Programmers,
+                    Multitasking Staff, Executive Assistants, Data Entry Operators, and Amins. Out of these, 24
+                    employees have been assigned air-conditioned (AC) workspaces to ensure a comfortable and productive
+                    environment. This deployment reflects our commitment to supporting the BOR with competent and
+                    well-equipped staff to enhance their operational efficiency across the state.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Repeat for Board Of Revenue -->
+
+
+    <section class="card"
+        style="display: flex; flex-wrap: wrap; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px auto; max-width: 1000px; overflow: hidden;">
+
+        <!-- Title -->
+        <h2 class="main-title"
+            style="width: 100%; text-align: center; background: #640124; color: white; padding: 15px 0; font-size: 24px; margin: 0;">
+            Dept. Of Agriculture Research and Education
+        </h2>
+
+        <!-- Left Side Image -->
+        <div class="left-side"
+            style="flex: 1 1 300px; min-width: 280px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+            <img src="./img/DOAR.jpg" alt="Board of Revenue Building" class="building"
+                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-side"
+            style="flex: 2 1 400px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+
+            <!-- Info -->
+            <div class="info" style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                <p><strong>Nature of Work:</strong> Maintanance Services</p>
+                <p><strong>No of Employees:</strong>
+                    <span class="employCount" data-target="47" style="font-weight: bold; color: #005a9c;">47</span>
+                </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description" style="font-size: 15px; color: #333;">
+                <p>
+                    Our company has provided a total of 106 skilled personnel to the Board of Revenue (BOR), Bihar,
+                    across various key roles including Retired Revenue Officers, Stenographers, Programmers,
+                    Multitasking Staff, Executive Assistants, Data Entry Operators, and Amins. Out of these, 24
+                    employees have been assigned air-conditioned (AC) workspaces to ensure a comfortable and productive
+                    environment. This deployment reflects our commitment to supporting the BOR with competent and
+                    well-equipped staff to enhance their operational efficiency across the state.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Repeat for Bihar Education Department -->
+
+
+    <section class="card"
+        style="display: flex; flex-wrap: wrap; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px auto; max-width: 1000px; overflow: hidden;">
+
+        <!-- Title -->
+        <h2 class="main-title"
+            style="width: 100%; text-align: center; background: #640124; color: white; padding: 15px 0; font-size: 24px; margin: 0;">
+            Bihar Education Department
+        </h2>
+
+        <!-- Left Side Image -->
+        <div class="left-side"
+            style="flex: 1 1 300px; min-width: 280px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+            <img src="./img/Education Department.jpg" alt="Board of Revenue Building" class="building"
+                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-side"
+            style="flex: 2 1 400px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+
+            <!-- Info -->
+            <div class="info" style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                <p><strong>Nature of Work:</strong> DEO,MTS,System Installation,Ict Lab Installation,etc.</p>
+                <p><strong>No of Employees:</strong>
+                    <span class="employCount" data-target="150" style="font-weight: bold; color: #005a9c;">150</span>
+                </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description" style="font-size: 15px; color: #333;">
+                <p>
+                    Our company has provided a total of 106 skilled personnel to the Board of Revenue (BOR), Bihar,
+                    across various key roles including Retired Revenue Officers, Stenographers, Programmers,
+                    Multitasking Staff, Executive Assistants, Data Entry Operators, and Amins. Out of these, 24
+                    employees have been assigned air-conditioned (AC) workspaces to ensure a comfortable and productive
+                    environment. This deployment reflects our commitment to supporting the BOR with competent and
+                    well-equipped staff to enhance their operational efficiency across the state.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Repeat for Bihar Education Department -->
+
+
+    <section class="card"
+        style="display: flex; flex-wrap: wrap; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px auto; max-width: 1000px; overflow: hidden;">
+
+        <!-- Title -->
+        <h2 class="main-title"
+            style="width: 100%; text-align: center; background: #640124; color: white; padding: 15px 0; font-size: 24px; margin: 0;">
+            Bihar Education Department
+        </h2>
+
+        <!-- Left Side Image -->
+        <div class="left-side"
+            style="flex: 1 1 300px; min-width: 280px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+            <img src="./img/Education Department.jpg" alt="Board of Revenue Building" class="building"
+                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-side"
+            style="flex: 2 1 400px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+
+            <!-- Info -->
+            <div class="info" style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                <p><strong>Nature of Work:</strong> House Keeping,Superviser,Lab Manager,etc.</p>
+                <p><strong>No of Employees:</strong>
+                    <span class="employCount" data-target="250" style="font-weight: bold; color: #005a9c;">250</span>
+                </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description" style="font-size: 15px; color: #333;">
+                <p>Our company has deployed 250 dedicated personnel to the
+                    Bihar Education Department to ensure smooth day-to-day operations and facility management. The team
+                    includes Guards, Housekeeping Staff, Supervisors, Lab Managers, and Inspection Managers, all
+                    selected to maintain cleanliness, security, and operational oversight across educational
+                    institutions and offices. This initiative demonstrates our commitment to delivering reliable and
+                    efficient support services that enhance the overall working environment and contribute to the
+                    department’s effective functioning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repeat for BIPARD -->
+
+
+    <section class="card"
+        style="display: flex; flex-wrap: wrap; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px auto; max-width: 1000px; overflow: hidden;">
+
+        <!-- Title -->
+        <h2 class="main-title"
+            style="width: 100%; text-align: center; background: #640124; color: white; padding: 15px 0; font-size: 24px; margin: 0;">
+            BIPARD
+        </h2>
+
+        <!-- Left Side Image -->
+        <div class="left-side"
+            style="flex: 1 1 300px; min-width: 280px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+            <img src="./img/BIPARD.jpg" alt="Board of Revenue Building" class="building"
+                style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-side"
+            style="flex: 2 1 400px; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+
+            <!-- Info -->
+            <div class="info" style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
+                <p><strong>Nature of Work:</strong> Engineer,Home Applainces,etc.</p>
+                <p><strong>No of Employees:</strong>
+                    <span class="employCount" data-target="250" style="font-weight: bold; color: #005a9c;">250</span>
+                </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description" style="font-size: 15px; color: #333;">
+                <p>Our company has deployed 250 dedicated personnel to the
+                    Bihar Education Department to ensure smooth day-to-day operations and facility management. The team
+                    includes Guards, Housekeeping Staff, Supervisors, Lab Managers, and Inspection Managers, all
+                    selected to maintain cleanliness, security, and operational oversight across educational
+                    institutions and offices. This initiative demonstrates our commitment to delivering reliable and
+                    efficient support services that enhance the overall working environment and contribute to the
+                    department’s effective functioning.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+<!-- Optional: Animated Count Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll('.employCount');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText;
+                const increment = Math.ceil(target / 100); // Speed factor
+                if (current < target) {
+                    counter.innerText = Math.min(current + increment, target);
+                    setTimeout(updateCount, 30);
+                }
+            };
+            updateCount();
+        });
+    });
+</script>
+
+
+
+
+<!-- Counter Script -->
+<script>
+    const counters = document.querySelectorAll(".employCount");
+
+    const startCount = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const duration = 2000;
+        const frameRate = 1000 / 60;
+        const steps = duration / frameRate;
+        const increment = target / steps;
+
+        const updateCount = () => {
+            count += increment;
+            if (count >= target) {
+                counter.textContent = target.toLocaleString();
+            } else {
+                counter.textContent = Math.floor(count).toLocaleString();
+                requestAnimationFrame(updateCount);
+            }
+        };
+
+        updateCount();
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                if (!counter.classList.contains("counted")) {
+                    counter.classList.add("counted");
+                    startCount(counter);
+                }
+                obs.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+</script>
+
+<!-- Scroll Reveal Script -->
+<script>
+    function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach(reveal => {
+            const windowHeight = window.innerHeight;
+            const elementTop = reveal.getBoundingClientRect().top;
+            const elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+
+
+
+
+
+<!-- Footer Start -->
+  <div class="container-fluid footer py-0 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-xl-9">
+          <div class="mb-5">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-6 col-xl-5">
+                <div class="footer-item">
+                  <a href="#" class="navbar-brand p-0">
+                    <h1 class="text-primary mb-0 d-flex align-items-center">
+                      <img src="img/logo.png" alt="MetConnect Logo" style="height: 40px; margin-right: 10px" />
+                      MetConnect
+                    </h1>
+                  </a>
+                  <p class="text-white mb-4">
+                    Metconnect Infotech Private Limited, established in 2022
+                    and headquartered in Patna, Bihar, is a dynamic and
+                    privately held company specializing in comprehensive Human
+                    Resource (HR) and compliance solutions.
+                  </p>
+                  <div class="footer-btn d-flex">
+                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/p/MetConnect-Infotech-Pvt-Ltd-100083566590777/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-3" href="https://x.com/MetConnect2022"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.instagram.com/metconnectinfotechpvt._l?igsh=N3B0NzIyMWk0dmt5"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-md-square rounded-circle me-0" href="https://www.linkedin.com/company/metconnect-infotech-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                  <h4 class="text-white mb-4">Useful Links</h4>
+                  <a href="./about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                  <a href="./Industries.html"><i class="fas fa-angle-right me-2"></i> Industries</a>
+                  <a href="./Services.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                  <a href="./carrier.html"><i class="fas fa-angle-right me-2"></i> Career</a>
+
+                  <a href="./contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                </div>
+
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="footer-item">
+                  <h4 class="mb-4 text-white">Policy</h4>
+                  <div class="row">
+                    <a href="TermsCondition.html">Terms & Conditions</a>
+                    <a href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="Accessibility.html">Accessibility</a>
+                  </div>
+                  <p class="text-white mb-2">
+                    <strong>Working Hours:</strong><br />
+                    <span class="d-block">(Mon – Sat) 10:00 AM – 6:00 PM</span>
+                    <span class="d-block">Sunday <span class="text-danger fw-semibold">Closed</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3">
+          <div class="footer-item">
+            <h4 class="text-white mb-4">Newsletter</h4>
+            <p class="text-white mb-3">
+              Stay connected with us for the latest updates, insights, and
+              opportunities that empower growth and streamline HR processes.
+            </p>
+            <div class="position-relative rounded-pill mb-4">
+              <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
+                placeholder="Enter your email" />
+              <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">
+                Send
+              </button>
+            </div>
+            <div class="d-flex flex-shrink-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright Start -->
+  <div style="
+        background-color: #000;
+        padding: 1.5rem 0;
+        color: #fff;
+        font-size: 14px;
+        width: 100%;
+        
+      ">
+    <div style="max-width: 1140px; margin: 0 auto; text-align: center">
+      <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+          ">
+        <div style="width: 100%">
+          <span style="color: #fff">
+            <a href="#" style="
+                  border-bottom: 1px solid transparent;
+                  color: #fff;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                " onmouseover="this.style.borderBottom='1px solid #fff'"
+              onmouseout="this.style.borderBottom='1px solid transparent'">
+              MetConnect Infotech Pvt. Ltd.
+            </a>
+
+            | © <span id="copyright-year"></span> All rights reserved.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize WOW.js animations
+    document.addEventListener("DOMContentLoaded", function () {
+      const wowElements = document.querySelectorAll(".wow");
+      wowElements.forEach((element) => {
+        element.classList.add("animate__animated");
+      });
+    });
+  </script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+input, textarea {
+  padding: 0.85rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+.btn-animated {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 118, 255, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-animated:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.5);
+}
+
+/* Info Section */
+.contact-info h3 {
+  color: #0072ff;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  margin-bottom: 0.9rem;
+}
+.small-fade {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+
+/* Map */
+.map {
+  width: 100%;
+  height: 320px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease-out;
+}

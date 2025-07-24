@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #015FC9;
+    --bs-primary: #640124;
     --bs-secondary: #0BE1FF;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -3082,14 +3082,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #015fc9;
-    border-color: #015fc9
+    background-color: #640124;
+    border-color: #640124;
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #0151ab;
-    border-color: #014ca1
+    color: #640124;
+    background-color: #fdfdfd;
+    border-color: #ffffff
 }
 
 .btn-check:focus+.btn-primary,
@@ -7282,9 +7282,9 @@ fieldset:disabled .btn {
     border-top: 0 !important
 }
 
-.border-end {
+/* .border-end {
     border-right: 1px solid #dee2e6 !important
-}
+} */
 
 .border-end-0 {
     border-right: 0 !important
@@ -8284,7 +8284,7 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #015fc9 !important
+    color: #640124 !important
 }
 
 .text-secondary {
